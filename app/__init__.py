@@ -1,4 +1,4 @@
-from app.routes import home, dashboard # Home is bp, which was imported and renamed in routes/__init__.py
+from app.routes import home, dashboard, api # Home is bp, which was imported and renamed in routes/__init__.py
 # app.routes grabs the __init__ in routes, similar to how index.js works (same goes for dashboard)
 
 from flask import Flask
@@ -29,6 +29,7 @@ def create_app(test_config=None):
     # register routes
     app.register_blueprint(home)
     app.register_blueprint(dashboard)
+    app.register_blueprint(api)
 
     init_db(app)
 

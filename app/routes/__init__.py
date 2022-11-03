@@ -8,3 +8,5 @@
 from .home import bp as home # The routes are attached to bp, so importing this brings those routes with it (also bp is being renamed to "home" here)
 
 from .dashboard import bp as dashboard
+
+from .api import bp as api
